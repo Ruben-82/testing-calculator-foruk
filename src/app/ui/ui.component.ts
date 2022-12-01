@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { addition } from "../addition/addition"
 import { division } from '../division/division';
 import { exp } from '../exp/exp';
+import { multiplication } from '../multiplication/multiplication';
 @Component({
   selector: 'app-ui',
   templateUrl: './ui.component.html',
@@ -39,4 +40,12 @@ export class UiComponent implements OnInit {
     this.result = myresult;
     this.text = "El exponente es: " + this.result;
   }
+
+  multiplication() {
+    let myresult = 1;
+    myresult = multiplication(this.operator1, this.operator2);
+    this.result = myresult;
+    this.text = "La multiplicación es: " + this.result;
+  }
+
 }
