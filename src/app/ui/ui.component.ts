@@ -5,6 +5,7 @@ import { exp } from '../exp/exp';
 import { multiplication } from '../multiplication/multiplication';
 import { sqr } from '../sqr/sqr';
 import { sqrt } from '../sqrt/sqrt';
+import { substraction } from '../substraction/substraction';
 @Component({
   selector: 'app-ui',
   templateUrl: './ui.component.html',
@@ -63,4 +64,10 @@ export class UiComponent implements OnInit {
     this.text = "La Raíz es: " + this.result;
   }
 
+  substraction() {
+    let myresult = 0;
+    myresult = substraction(this.operator1, this.operator2);
+    this.result = myresult;
+    this.text = "La resta es: " + this.result;
+  }
 }
