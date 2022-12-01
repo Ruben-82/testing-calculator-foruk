@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { addition } from "../addition/addition"
 import { division } from '../division/division';
-
+import { exp } from '../exp/exp';
 @Component({
   selector: 'app-ui',
   templateUrl: './ui.component.html',
@@ -31,5 +31,12 @@ export class UiComponent implements OnInit {
     myresult = division(this.operator1, this.operator2);
     this.result = myresult;
     this.text = "La división es: " + this.result;
+  }
+
+  exp() {
+    let myresult = 1;
+    myresult = exp(this.operator1, this.operator2);
+    this.result = myresult;
+    this.text = "El exponente es: " + this.result;
   }
 }
