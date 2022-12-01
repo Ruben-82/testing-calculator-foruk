@@ -3,6 +3,7 @@ import { addition } from "../addition/addition"
 import { division } from '../division/division';
 import { exp } from '../exp/exp';
 import { multiplication } from '../multiplication/multiplication';
+import { sqr } from '../sqr/sqr';
 @Component({
   selector: 'app-ui',
   templateUrl: './ui.component.html',
@@ -46,6 +47,13 @@ export class UiComponent implements OnInit {
     myresult = multiplication(this.operator1, this.operator2);
     this.result = myresult;
     this.text = "La multiplicación es: " + this.result;
+  }
+
+  sqr() {
+    let myresult = 1;
+    myresult = sqr(this.operator1);
+    this.result = myresult;
+    this.text = "El cuadrado es: " + this.result;
   }
 
 }
