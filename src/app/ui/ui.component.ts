@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { addition } from "../addition/addition"
+import { division } from '../division/division';
 
 @Component({
   selector: 'app-ui',
@@ -23,5 +24,12 @@ export class UiComponent implements OnInit {
     myresult = addition(this.operator1, this.operator2);
     this.result = myresult;
     this.text = "La suma es: " + this.result;
+  }
+
+  division() {
+    let myresult = 1;
+    myresult = division(this.operator1, this.operator2);
+    this.result = myresult;
+    this.text = "La división es: " + this.result;
   }
 }
