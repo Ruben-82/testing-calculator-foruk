@@ -4,6 +4,7 @@ import { division } from '../division/division';
 import { exp } from '../exp/exp';
 import { multiplication } from '../multiplication/multiplication';
 import { sqr } from '../sqr/sqr';
+import { sqrt } from '../sqrt/sqrt';
 @Component({
   selector: 'app-ui',
   templateUrl: './ui.component.html',
@@ -54,6 +55,12 @@ export class UiComponent implements OnInit {
     myresult = sqr(this.operator1);
     this.result = myresult;
     this.text = "El cuadrado es: " + this.result;
+  }
+  sqrt() {
+    let myresult = 1;
+    myresult = sqrt(this.operator1);
+    this.result = myresult;
+    this.text = "La Raíz es: " + this.result;
   }
 
 }
