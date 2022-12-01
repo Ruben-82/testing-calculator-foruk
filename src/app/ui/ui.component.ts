@@ -13,6 +13,7 @@ export class UiComponent implements OnInit {
   result = 0;
   operator1 = 0;
   operator2 = 0;
+  text = " ";
 
   ngOnInit() {
   }
@@ -21,10 +22,6 @@ export class UiComponent implements OnInit {
     let myresult = 0;
     myresult = addition(this.operator1, this.operator2);
     this.result = myresult;
+    this.text = "La suma es: " + this.result;
   }
-
-  substraction() {
-    alert("substraction here !");
-  }
-
 }

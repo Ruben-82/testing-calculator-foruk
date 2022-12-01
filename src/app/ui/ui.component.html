@@ -1,23 +1,57 @@
-<div class="calculator">
+<div class="calculator"></div>
 
-    <form>
-        <div class="input-group">
-            <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span> 
-            <input id="operator1" [(ngModel)]="operator1" type="number" class="form-control operator1" name="operator1" placeholder="0.0">
+<main>
+    <section>
+        <h4>Rubén Castillo Ramírez</h4>
+        <h4>Grupo: 502</h4>
+        <h1>Calculadora</h1>
+    </section>
+
+    <div class="container">
+        <div class="col">
+            <div class="card" style="width: 18rem; margin: 1rem 0rem">
+                <div class="card-body">
+                    <form>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+                            <input id="operator1" [(ngModel)]="operator1" type="number" class="form-control operator1" name="operator1" placeholder="0.0" />
+                        </div>
+
+                        <div class="input-group" style="margin-top: 3rem">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+                            <input id="operator2" [(ngModel)]="operator2" type="number" class="form-control operator2" name="operator2" placeholder="0.0" />
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
 
-        <div class="input-group">
-            <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-            <input id="operator2" [(ngModel)]="operator2" type="number" class="form-control operator2" name="operator2" placeholder="0.0">
+
+        <div class="col">
+            <div class="card; row" style="width: 20rem; margin: 1rem 0rem">
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        <button type="button" class="btn btn-primary addition-button" (click)="addition()" style="width: 20rem; height: 6rem; padding: 0; margin: 1rem 0rem;">
+                  <p style="margin: 0; font-size: 20px; font-weight: 500">
+                    Suma
+                  </p>
+              </button>
+
+
+                    </ul>
+                </div>
+            </div>
         </div>
-    </form>
+        <div class="col">
+            <section>
+                <div class="card text-center" style="width: 20rem; margin: 1rem 0rem">
+                    <div class="card-header">Resultado</div>
+                    <div class="card-body">
+                        <span class="result">{{ text }}</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
 
-    <i class="glyphicon glyphicon-plus addition-button"
-        (click)="addition()"></i>
-
-    <i class="glyphicon glyphicon-minus substraction-button"
-        (click)="substraction()"></i>
-
-</div>
-
-<span class="result">{{ result }}</span>
+</main>
